@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QuickMunch</title>
+	<link rel="icon" type="image/x-icon" href="Cookiebutton.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+	<style>
+		body {
+			font-family: 'Lato', sans-serif;
+			font-size: 16px;
+			line-height: 1.6;
+			color: #333;
+			background-color: #f7f7f7;
+		}
+		header {
+			background-color: #fff;
+			padding: 0px;
+			box-shadow: 0 4px 5px rgba(0,0,0,.1);
+			margin-bottom: 50px;
+		}
+		h1 {
+			font-size: 36px;
+			margin: 0;
+		}
+		h2 {
+			font-size: 28px;
+			margin-top: 40px;
+			margin-bottom: 20px;
+		}
+		p {
+			margin: 0;
+			margin-bottom: 20px;
+		}
+		.container {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		.recipe {
+			margin-bottom: 40px;
+			padding: 20px;
+			background-color: #fff;
+			box-shadow: 0 2px 4px rgba(0,0,0,.1);
+		}
+		.recipe img {
+			max-width: 100%;
+			height: auto;
+			margin-bottom: 0px;
+		}
+		.recipe h2 {
+			margin-top: 0;
+			margin-bottom: 10px;
+			font-size: 24px;
+		}
+		.recipe p {
+			margin-bottom: 10px;
+		}
+		.recipe ul {
+			list-style: disc;
+			margin: 0;
+			margin-bottom: 20px;
+			padding-left: 20px;
+		}
+		.recipe li {
+			margin-bottom: 10px;
+		}
+		.recipe .button {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: #333;
+			color: #fff;
+			text-decoration: none;
+			border-radius: 4px;
+		}
+		.recipe .button:hover {
+			background-color: #555;
+		}
+		.main-navigation {
+   			 max-width: 990px;
+   			 padding: 0;
+   			 width: calc(100% - 20px);
+    			 align-items: center;
+   			 margin: 0 auto;
+    			 position: relative;
+	        }
+		.site-menu {
+   			 display: flex;
+       			 flex-direction: row;
+       			 align-items: center;
+       			 justify-content: space-between;
+   		}
+		.menu-left {
+      			 display: flex;
+      			 flex-direction: row;
+      			 align-items: center;
+       			 justify-content: space-between;
+		}
+		.site-title {
+      			 margin: 0;
+       			 line-height: 1;
+       			 width: 300px;
+		}
+
+		.side-title-munch {
+       			 display: block;
+       			 width: 100%;
+       			 background: url(Quickmunchlogo.png) no-repeat center;
+       			 background-size: contain;
+       			 margin: 0;
+      			 max-width: 300px;
+       			 height: 55px;
+       			 text-indent: -9999px;
+       			 transition: transform 400ms;
+		}
+
+		.menu-right {
+       			 display: flex;
+       			 flex-direction: row;
+       			 align-items: center;
+       			 justify-content: space-between;
+		}
+		a {
+       			 color: #c266ff;
+       			 outline: none;
+       			 text-decoration: none;
+		}
+
+		ul {
+       			 list-style: disc;
+       			 margin-block-start: 1em;
+       			 margin-block-end: 1em;
+       			 margin-inline-start: 0px;
+       			 margin-inline-end: 0px;
+       			 padding-inline-start: 40px;
+      			 margin-block-start: 1em;
+       			 margin-block-end: 1em;
+       			 margin-inline-start: 0px;
+       			 margin-inline-end: 0px;
+       			 padding-inline-start: 40px;
+		}
+		.buttons-menu li a:before {
+       			 content: "";
+       			 position: absolute;
+       			 bottom: -5px;
+      			 left: 0;
+       			 width: 100%;
+       			 height: 1px;
+       			 background-color: #212121;
+       			 transform: scaleX(0);
+       			 transition: all 250ms ease;
+       			 border-radius: 44px;
+       			 transform-origin: left;
+		}
+		.buttons-menu li a {
+       			 display: block;
+       			 line-height: 1;
+       			 position: relative;
+       			 font-weight: 700;
+		}
+		.buttons-menu li {
+       			 display: block;
+       			 list-style: none;
+       			 margin-right: 20px;
+		}
+		.buttons-menu li.menu-item-has-children a:before {
+       			 display: none;
+		}
+
+		.buttons-menu li a:hover::before {
+       			 transform: scaleX(1);
+		}
+
+		.buttons-menu {
+       			 display: flex;
+       			 justify-content: space-between;
+       			 align-items: center;
+       			 margin: 0;
+       			 font-family: 'Playfair Display', Georgia, serif;
+       			 font-size: 15px;
+       			 letter-spacing: -.01em;
+		}
+		.menu-icon {
+       			 position: relative;
+       			 width: 50px;
+       			 height: 50px;
+       			 display: block;
+       			 margin: 0 auto 5px;
+		}
+		.icon-cookies {
+       			 background: url(Cookiebutton.png) no-repeat center;
+	   	 	 background-size: contain;
+		}
+		.icon-cakes {
+       			 background: url(Cakebutton.png) no-repeat center;
+	   		 background-size: contain;
+		}
+		.icon-breads {
+       			 background: url(Breadbutton.png) no-repeat center;
+	   		 background-size: contain;
+		}
+		.icon-pie {
+       			 background: url(Piebutton.png) no-repeat center;
+	   		 background-size: contain;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<nav class="main-navigation">
+<div class="site-menu">
+
+	<div class="menu-left">	
+ 	<div class="site-title">
+	<a href="Quickmunch Thewebsite.html" class="side-title-munch"></a class="side-title-munch">
+	</div class="site-title">
+	</div class="menu-left">
+	<div class="menu-right">
+	<ul class="buttons-menu">
+		<li id="menu-cookie" class ="buttons-menu">
+		<a href="Cookies.html">
+		<i class="menu-icon icon-cookies"></i>
+		 Cookies	
+		</a>
+		</li id="menu-cookie" class ="buttons-menu">
+
+		<li id="menu-cake" class ="buttons-menu">
+		<a href="Cakes.html">
+		<i class="menu-icon icon-cakes"></i>
+		Cakes	
+		</a>
+		</li id="menu-cake" class ="buttons-menu">
+
+		<li id="menu-bread" class ="buttons-menu">
+		<a href="Bread.html">
+		<i class="menu-icon icon-breads"></i>
+		Breads	
+		</a>
+		</li id="menu-bread" class ="buttons-menu">
+
+		<li id="menu-pie" class ="buttons-menu">
+		<a href="Pie.html">
+		<i class="menu-icon icon-pie"></i>
+		Pies	
+		</a>
+		</li id="menu-pie" class ="buttons-menu">
+	</div>
+	</div>
+
+</div>
+</div>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<article class="recipe">
+				<h2>Cherry Pie</h2>
+				<img src="pie1.jpg" width="200" hight="200" alt="cake">
+				<h5>Cherry pie is considered a classic dessert in many cultures and is loved by many for its sweet, tart, and juicy filling encased in a flaky and buttery crust.</h5>
+				<h3>Ingredients</h3>
+<ul>
+  <li>For the Pie Crust:</li>
+  <ul>
+    <li>1/3 cup cold unsalted butter</li>
+    <li>1/3 cup cold shortening, diced</li>
+    <li>2 1/2 cups all-purpose flour</li>
+    <li>1/2 teaspoon salt</li>
+    <li>1/4 cup cold water</li>
+  </ul>
+  <li>For the Filling:</li>
+  <ul>
+    <li>7 to 8 cups fresh tart cherries, or 6 cups frozen</li>
+    <li>1 1/4 cups sugar, divided</li>
+    <li>1/4 cup cornstarch</li>
+    <li>1 tablespoon lemon juice</li>
+    <li>1 teaspoon vanilla extract</li>
+    <li>1/4 teaspoon almond extract</li>
+    <li>1 tablespoon butter, diced</li>
+  </ul>
+</ul>
+<h3>Instructions:</h3>
+<ol>
+<li>Grate the butter with a cheese grater into a bowl. Add the shortening, flour, and salt.</li>
+<li>Cut the butter and shortening into the flour with a pastry blender until the fat is dispersed throughout the flour. The butter and shortening should all be pea to bean-sized pieces.</li>
+<li>Add the water a little at a time until you have a rough dough.</li>
+<li>Form the dough into two balls and flatten. Wrap one in plastic wrap and place in the fridge.</li>
+<li>Roll one ball of dough into a round that's about 1/8-inch thick and 12 inches across.</li>
+<li>Fit pie crust into a 9-inch pie dish. Press the dough all the way down and allow some of the dough to hang over the edge of the pie tin. Set aside. If your kitchen is warm, place the lined pie pan in the fridge.</li>
+<li>Gather the ingredients. Preheat the oven to 375 F.</li>
+<li>Pit the cherries using a cherry pitter for the fastest results. Thaw the cherries if you are using frozen.</li>
+<li>Thoroughly drain the cherries once you are done pitting or thawing. Then combine them in a large bowl with 3/4 cup of the sugar, the cornstarch, lemon juice, vanilla extract, and almond extract. Stir to combine, and taste. Add more sugar (up to 1 1/4 cups) if necessary and stir to combine.</li>
+<li>Fill the bottom pie shell with the cherry mixture and dot the top with the diced butter.</li>
+<li>Roll out the other pie dough circle into a 10-inch circle. Cut the circle into 1-inch strips.</li>
+<li>Lay four of the strips over the filling in the same direction.</li>
+<li>Fold alternating strips over themselves halfway and place another strip in the center of the pie to create the lattice design.</li>
+<li>Fold the strips back over the center strip. Repeat alternating which strips you fold back.</li>
+<li>Repeat on the other side of the pie.</li>
+<li>Crimp the edges of the pie crust together, trimming as needed and sealing.</li>
+<li>Sprinkle the top of the pie with granulated sugar.</li>
+<li>Transfer the pie to the oven and bake for about 45 minutes, or until the crust is golden brown and flaky and the filling is bubbly. Cool on a wire rack for at least 2 hours before slicing.</li>
+</ol>
+<a href="#" class="button">Print Recipe</a>
+</article>
+<article class="recipe">
+				<h2>Strawberry-Rhubarb Pie</h2>
+				<img src="pie2.jpg" width="200" hight="200" alt="cake">
+				<h5>Strawberry-rhubarb pie is a popular dessert because it combines the sweet and tangy flavors of fresh strawberries and tart rhubarb in a delicious, buttery crust.</h5>
+				<h3>Ingredients</h3>
+<ul>
+  <li>For the crust:</li>
+  <ul>
+    <li>2 cups all-purpose flour, plus more for dusting</li>
+    <li>1/2 teaspoon salt</li>
+    <li>2 sticks cold unsalted butter, cut into chunks</li>
+    <li>2 tablespoons milk</li>
+    <li>2 tablespoons coarse sugar</li>
+  </ul>
+  <li>For the filling:</li>
+  <ul>
+    <li>1 1/4 pounds rhubarb</li>
+    <li>2 pints strawberries</li>
+    <li>1 cup granulated sugar</li>
+    <li>2 heaping tablespoons all-purpose flour</li>
+    <li>1/2 teaspoon ground cinnamon</li>
+    <li>Pinch of salt</li>
+    <li>2 teaspoons vanilla extract</li>
+    <li>Juice of 1/2 lemon</li>
+  </ul>
+</ul>
+<h3>Instructions:</h3>
+<ol>
+  <li>Make the crust. Combine the flour, salt and butter in a large bowl. Gently cut the butter into the flour using 2 sharp knives in a crisscross motion until the butter is about the size of small peas. (The lighter the hand, the flakier the crust.) Slowly drizzle in 1/2 cup ice water and fold into the mixture with a fork until the dough comes together-you want to work the dough as little as possible. Add more water, 1 tablespoon at a time, if the dough is too dry. Turn the dough out onto a floured surface and divide into 2 balls. Form each into a disk, wrap in plastic and refrigerate at least 30 minutes.</li>
+  <li>Meanwhile, trim the rhubarb and cut into 1/2-inch pieces. Hull the strawberries and slice. Combine the rhubarb, strawberries, granulated sugar, flour, cinnamon, salt, vanilla and lemon juice in a large bowl; toss.</li>
+  <li>Prepare the bottom crust. Preheat the oven to 425 degrees F. Roll out 1 disk of dough on a floured surface into a 12-inch round. Roll the dough onto the rolling pin, then carefully unroll it over a 9-inch pie plate. Gently press the dough into the plate with your fingers. Add the strawberry-rhubarb filling. Do not trim the overhanging dough.</li>
+  <li>Make the lattice. Roll out the remaining disk of dough into a 12-inch round. With an old-fashioned crimper, sharp knife or pizza cutter, cut into 1-inch-wide strips. Lay about half of the strips on the pie in one direction, about 1/2 inch apart. Fold back every other strip halfway. Lay a strip perpendicular to the first ones. Unfold the strips back over the new strip, then fold alternate strips back halfway. Add another perpendicular strip; unfold the strips back over it. Repeat to form a lattice. Pinch the overhanging top and bottom crusts together, trimming as needed, then fold the dough under itself and crimp with your fingers.</li>
+  <li>Bake the pie. Using your fingers, pat the lattice top with milk and sprinkle with coarse sugar. Put the pie on a baking sheet and place in the preheated oven. Bake 20 minutes, then reduce the oven temperature to 375 degrees F and bake until the crust is golden brown and the filling is bubbling, 50 more minutes. Let cool completely before slicing.</li>
+</ol>
+<a href="#" class="button">Print Recipe</a>
+</article>
+
+</div>
+</main>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
