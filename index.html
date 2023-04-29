@@ -126,45 +126,36 @@
        			 outline: none; /* This property sets the color of the text of the anchor element to "#c266ff".   */
        			 text-decoration: none; /* removes the underline from the anchor element   */
 		}
-
-		ul { /*    */
-       			 list-style: disc; /*This sets the bullet style for list items to a disc shape.   */
-       			 margin-block-start: 1em; /* This sets the margin before the block-level container (in this case, the ul element) to 1em.   */
-       			 margin-block-end: 1em; /* This sets the margin after the block-level container to 1em.   */
-       			 margin-inline-start: 0px; /* This sets the horizontal margin on the left side of the ul element to 0 pixels.   */
-       			 margin-inline-end: 0px; /* This sets the horizontal margin on the right side of the ul element to 0 pixels.   */
-       			 padding-inline-start: 40px; /* This sets the horizontal padding on the left side of the ul element to 40 pixels.   */
+		.buttons-menu li a:before { /* Selects the before pseudo-element of the anchor tag within any list item that has the class "buttons-menu"    */
+       			 content: ""; /*  Sets the content of the pseudo-element to an empty string.   */
+       			 position: absolute; /* Sets the position to absolute, which means the element is positioned relative to its nearest positioned ancestor element.    */
+       			 bottom: -5px; /* Sets the distance between the bottom of the element and the nearest positioned ancestor element's bottom edge to 5 pixels.    */
+      			 left: 0; /* Sets the distance between the left of the element and the nearest positioned ancestor element's left edge to 0.    */
+       			 width: 100%; /* : Sets the width of the element to 100% of its containing block    */
+       			 height: 1px; /* Sets the height of the element to 1 pixel.    */
+       			 background-color: #212121; /* Sets the background color of the element to a dark gray (#212121).   */
+       			 transform: scaleX(0); /* Applies a horizontal scaling transformation to the element, making it invisible     */
+       			 transition: all 250ms ease; /*  Applies a transition effect to the element, making it change smoothly over 250 milliseconds.   */
+       			 border-radius: 44px; /* Rounds the corners of the element to 44 pixels.    */ 
+       			 transform-origin: left; /*  Sets the origin of the scaling transformation to the left edge of the element.   */
 		}
-		.buttons-menu li a:before {
-       			 content: "";
-       			 position: absolute;
-       			 bottom: -5px;
-      			 left: 0;
-       			 width: 100%;
-       			 height: 1px;
-       			 background-color: #212121;
-       			 transform: scaleX(0);
-       			 transition: all 250ms ease;
-       			 border-radius: 44px;
-       			 transform-origin: left;
+		.buttons-menu li a { /*     */
+       			 display: block; /*     */
+       			 line-height: 1; /*     */
+       			 position: relative; /*     */
+       			 font-weight: 700; /*     */
 		}
-		.buttons-menu li a {
-       			 display: block;
-       			 line-height: 1;
-       			 position: relative;
-       			 font-weight: 700;
+		.buttons-menu li { /*     */
+       			 display: block; /*     */
+       			 list-style: none;  /*     */
+       			 margin-right: 20px; /*     */
 		}
-		.buttons-menu li {
-       			 display: block;
-       			 list-style: none;
-       			 margin-right: 20px;
-		}
-		.buttons-menu li.menu-item-has-children a:before {
-       			 display: none;
+		.buttons-menu li.menu-item-has-children a:before { /*     */
+       			 display: none; /*     */
 		}
 
-		.buttons-menu li a:hover::before {
-       			 transform: scaleX(1);
+		.buttons-menu li a:hover::before { /*     */
+       			 transform: scaleX(1); /*     */
 		}
 
 		.buttons-menu {
