@@ -104,7 +104,7 @@
 		}
 
 		.side-title-munch { /*  This selector targets an HTML element with a class name of "side-title-munch".   */
-       			 display: block; /* sets the display to block   */
+       			 display: block; /* Sets the display property to block, the element takes up the full width of its parent container   */
        			 width: 100%; /* sets the width to 100%.  */
        			 background: url(Quickmunchlogo.png) no-repeat center; /*  This property sets the background image to "Quickmunchlogo.png" with no repetition, and centered.  */
        			 background-size: contain; /*  This property sets the size of the background image to contain  */
@@ -139,56 +139,51 @@
        			 border-radius: 44px; /* Rounds the corners of the element to 44 pixels.    */ 
        			 transform-origin: left; /*  Sets the origin of the scaling transformation to the left edge of the element.   */
 		}
-		.buttons-menu li a { /*     */
-       			 display: block; /*     */
-       			 line-height: 1; /*     */
-       			 position: relative; /*     */
-       			 font-weight: 700; /*     */
+		.buttons-menu li a { /*  Selects the anchor tag within any list item that has the class "buttons-menu"   */
+       			 display: block; /* Sets the display property to block, the element takes up the full width of its parent container   */
+       			 line-height: 1; /*  Sets the height of each line of text within the element to 1.   */
+       			 position: relative; /* Sets the position of the element to relative    */
+       			 font-weight: 700; /*  Sets the font weight of the text within the element to 700 (bold)   */
 		}
-		.buttons-menu li { /*     */
-       			 display: block; /*     */
-       			 list-style: none;  /*     */
-       			 margin-right: 20px; /*     */
-		}
-		.buttons-menu li.menu-item-has-children a:before { /*     */
-       			 display: none; /*     */
+		.buttons-menu li { /* : Selects any list item that has the class "buttons-menu"      */
+       			 display: block; /* Sets the display property to block, the element takes up the full width of its parent container     */
+       			 list-style: none;  /* Removes the default list marker    */
+       			 margin-right: 20px; /* Sets the right margin of the element to 20 pixels    */
 		}
 
 		.buttons-menu li a:hover::before { /*     */
        			 transform: scaleX(1); /*     */
 		}
 
-		.buttons-menu {
-       			 display: flex;
-       			 justify-content: space-between;
-       			 align-items: center;
-       			 margin: 0;
-       			 font-family: 'Playfair Display', Georgia, serif;
-       			 font-size: 15px;
-       			 letter-spacing: -.01em;
+		.buttons-menu { /*  selects the element with the class .buttons-menu and applies the following styles to it  */
+       			 display: flex; /*  sets the display property to flex    */
+       			 align-items: center; /* vertically centers the elements within the container.    */
+       			 margin: 0; /*  removes any margin   */
+       			 font-family: 'Playfair Display', Georgia, serif; /* sets the font family to Playfair Display, Georgia, or any other serif font.     */
+       			 font-size: 15px; /*  sets the font size to 15 pixels    */
 		}
-		.menu-icon {
-       			 position: relative;
-       			 width: 50px;
-       			 height: 50px;
-       			 display: block;
-       			 margin: 0 auto 5px;
+		.menu-icon { /* selects the element with the class .menu-icon and applies the following styles to it    */
+       			 position: relative; /* sets the positioning context for the element to relative.    */
+       			 width: 50px; /*  sets the width of the element to 50 pixels.    */
+       			 height: 50px; /* sets the height of the element to 50 pixels.    */
+       			 display: block; /* Sets the display property to block, the element takes up the full width of its parent container    */
+       			 margin: 0 auto ; /*  sets the margin of the element to 0 on the top and bottom, and centers it horizontally.    */
 		}
-		.icon-cookies {
-       			 background: url(Cookiebutton.png) no-repeat center;
-	   	 	 background-size: contain;
+		.icon-cookies { /*selects the element with the class .icon-cookies and applies the following styles to it     */
+       			 background: url(Cookiebutton.png) no-repeat center; /* specifies that the background image for this class should be Cakebutton.png and specifies that the image should not be repeated     */
+	   	 	 background-size: contain; /* the image should be scaled proportionally to fit within the container, but not exceed its bounds.    */
 		}
-		.icon-cakes {
-       			 background: url(Cakebutton.png) no-repeat center;
-	   		 background-size: contain;
+		.icon-cakes { /*  selects the element with the class .icon-cakes and applies the following styles to it   */
+       			 background: url(Cakebutton.png) no-repeat center; /*specifies that the background image for this class should be Cakebutton.png and specifies that the image should not be repeated    */
+	   		 background-size: contain; /* the image should be scaled proportionally to fit within the container, but not exceed its bounds.    */
 		}
-		.icon-breads {
-       			 background: url(Breadbutton.png) no-repeat center;
-	   		 background-size: contain;
+		.icon-breads { /* selects the element with the class .icon-breads and applies the following styles to it    */
+       			 background: url(Breadbutton.png) no-repeat center; /*specifies that the background image for this class should be Breadbutton.png and specifies that the image should not be repeated    */
+	   		 background-size: contain; /* the image should be scaled proportionally to fit within the container, but not exceed its bounds.    */
 		}
-		.icon-pie {
-       			 background: url(Piebutton.png) no-repeat center;
-	   		 background-size: contain;
+		.icon-pie { /*  selects the element with the class .icon-pie and applies the following styles to it   */
+       			 background: url(Piebutton.png) no-repeat center; /*specifies that the background image for this class should be Piebutton.png and specifies that the image should not be repeated    */
+	   		 background-size: contain; /* the image should be scaled proportionally to fit within the container, but not exceed its bounds.    */
 		}
 	</style>
 </head>
