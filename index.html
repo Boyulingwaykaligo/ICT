@@ -85,60 +85,55 @@
    			 margin: 0 auto; /*  This centers the element horizontally within its parent element.  */ 
     			 position: relative; /*  This sets the position property of the element to relative, which allows it to be positioned relative to its normal position.  */
 	        }
-		.site-menu { /*  removes any padding  */
-   			 display: flex; /*  removes any padding  */
-       			 flex-direction: row; /*  removes any padding */
-       			 align-items: center; /*  removes any padding  */
-       			 justify-content: space-between; /*  removes any padding  */
+		.site-menu { /*  This is a CSS class selector that targets the site menu element on the webpage.  */
+   			 display: flex; /*  This sets the display property of the element to flex  */
+       			 flex-direction: row; /* This sets the direction of the flex items to be in a row. */
+       			 align-items: center; /*  This centers the items within the element along the vertical axis.  */
+       			 justify-content: space-between; /*  removes any paddingThis distributes the items within the element evenly along the horizontal axis with space between them.  */
    		}
-		.menu-left { /*  removes any padding  */
-      			 display: flex; /*  removes any padding */
-      			 flex-direction: row; /*  removes any padding  */
-      			 align-items: center; /* removes any padding */
-       			 justify-content: space-between; /*  removes any padding  */
+		.menu-left { /*  This is a CSS class selector that targets the left side of the site menu element on the webpage. */
+      			 display: flex; /*  This sets the display property of the element to flex */
+      			 flex-direction: row; /* This sets the direction of the flex items to be in a row.  */
+      			 align-items: center; /* This centers the items within the element along the vertical axis */
+       			 justify-content: space-between; /*  This distributes the items within the element evenly along the horizontal axis with space between them.  */
 		}
-		.site-title { /*  removes any padding */
-      			 margin: 0; /*  removes any padding  */
-       			 line-height: 1; /* removes any padding  */
-       			 width: 300px; /*  removes any padding */
-		}
-
-		.side-title-munch { /*  removes any padding  */
-       			 display: block; /*  removes any padding  */
-       			 width: 100%; /*  removes any padding  */
-       			 background: url(Quickmunchlogo.png) no-repeat center; /*  removes any padding  */
-       			 background-size: contain; /*  removes any padding  */
-       			 margin: 0; /*  removes any padding  */
-      			 max-width: 300px; /*  removes any padding  */
-       			 height: 55px; /*  removes any padding  */
-       			 text-indent: -9999px; /*  removes any padding */
-       			 transition: transform 400ms; /*  removes any padding  */
+		.site-title { /*  This selector targets an HTML element with a class name of "site-title" */
+      			 margin: 0; /*  sets the margin to zero.  */
+       			 line-height: 1; /* sets the line-height to one.  */
+       			 width: 300px; /*  sets the width to 300 pixels*/
 		}
 
-		.menu-right {
-       			 display: flex;
-       			 flex-direction: row;
-       			 align-items: center;
-       			 justify-content: space-between;
-		}
-		a {
-       			 color: #c266ff;
-       			 outline: none;
-       			 text-decoration: none;
+		.side-title-munch { /*  This selector targets an HTML element with a class name of "side-title-munch".   */
+       			 display: block; /* sets the display to block   */
+       			 width: 100%; /* sets the width to 100%.  */
+       			 background: url(Quickmunchlogo.png) no-repeat center; /*  This property sets the background image to "Quickmunchlogo.png" with no repetition, and centered.  */
+       			 background-size: contain; /*  This property sets the size of the background image to contain  */
+       			 margin: 0; /*  sets the margin to 0  */
+      			 max-width: 300px; /*  sets the max width to 300 pixels */
+       			 height: 55px; /*  sets the height to 55 pixels  */
+       			 text-indent: -9999px; /*  This property sets the text indent of the HTML element to -9999 pixels, which hides the text from view. */
+       			 transition: transform 400ms; /*  This property sets the transition of the element to transform, with a duration of 400 milliseconds.  */
 		}
 
-		ul {
-       			 list-style: disc;
-       			 margin-block-start: 1em;
-       			 margin-block-end: 1em;
-       			 margin-inline-start: 0px;
-       			 margin-inline-end: 0px;
-       			 padding-inline-start: 40px;
-      			 margin-block-start: 1em;
-       			 margin-block-end: 1em;
-       			 margin-inline-start: 0px;
-       			 margin-inline-end: 0px;
-       			 padding-inline-start: 40px;
+		.menu-right { /*  This selector targets an element with a class name of "menu-right".   */
+       			 display: flex; /* This property sets the display of the element to flex   */
+       			 flex-direction: row; /* This property sets the flex direction of the element to row.   */
+       			 align-items: center; /* this property sets the vertical alignment of the  element to center.   */
+       			 justify-content: space-between; /* This property sets the horizontal alignment of the element to space between.   */
+		}
+		a { /* This selector targets all anchor (link) elements.  */
+       			 color: #c266ff; /* This property sets the color of the text of the anchor element to "#c266ff"  */
+       			 outline: none; /* This property sets the color of the text of the anchor element to "#c266ff".   */
+       			 text-decoration: none; /* removes the underline from the anchor element   */
+		}
+
+		ul { /*    */
+       			 list-style: disc; /*This sets the bullet style for list items to a disc shape.   */
+       			 margin-block-start: 1em; /* This sets the margin before the block-level container (in this case, the ul element) to 1em.   */
+       			 margin-block-end: 1em; /* This sets the margin after the block-level container to 1em.   */
+       			 margin-inline-start: 0px; /* This sets the horizontal margin on the left side of the ul element to 0 pixels.   */
+       			 margin-inline-end: 0px; /* This sets the horizontal margin on the right side of the ul element to 0 pixels.   */
+       			 padding-inline-start: 40px; /* This sets the horizontal padding on the left side of the ul element to 40 pixels.   */
 		}
 		.buttons-menu li a:before {
        			 content: "";
