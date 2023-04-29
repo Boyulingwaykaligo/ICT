@@ -7,112 +7,112 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 	<style>
 		body {
-			font-family: 'Lato', sans-serif;
-			font-size: 16px;
-			line-height: 1.6;
-			color: #333;
-			background-color: #f7f7f7;
+			font-family: 'Lato', sans-serif; <!-- it sets the font to Lato  -->
+			font-size: 16px; <!-- the font size to 16 pixels -->
+			line-height: 1.6; <!-- the line height to 1.6 (which determines the spacing between lines of text) -->
+			color: #333; <!-- the text color to a dark gray (#333) -->
+			background-color: #f7f7f7; <!-- the background color to a light gray (#f7f7f7 -->
 		}
 		header {
-			background-color: #fff;
-			padding: 0px;
-			box-shadow: 0 4px 5px rgba(0,0,0,.1);
-			margin-bottom: 50px;
+			background-color: #fff; <!-- It sets the background color to white  -->
+			padding: 0px; <!-- removes any padding  -->
+			box-shadow: 0 4px 5px rgba(0,0,0,.1); <!-- adds a box shadow effect with a light gray color  -->
+			margin-bottom: 50px; <!-- and adds a margin of 50 pixels at the bottom  -->
 		}
 		h1 {
-			font-size: 36px;
-			margin: 0;
+			font-size: 36px; <!-- sets the font size to 36 pixels  -->
+			margin: 0; <!-- removes any margin -->
 		}
 		h2 {
-			font-size: 28px;
-			margin-top: 40px;
-			margin-bottom: 20px;
+			font-size: 28px; <!-- sets the font size to 28 pixels  -->
+			margin-top: 40px; <!-- adds a margin of 40 pixels at the top  -->
+			margin-bottom: 20px; <!-- adds a margin of 20 pixels at the bottom  -->
 		}
 		p {
-			margin: 0;
-			margin-bottom: 20px;
+			margin: 0; <!-- It removes any margin   -->
+			margin-bottom: 20px; <!-- adds a margin of 20 pixels at the bottom  -->
 		}
 		.container {
-			max-width: 1000px;
-			margin: 0 auto;
-			padding: 20px;
+			max-width: 1000px; <!-- It sets the maximum width to 1000 pixels  -->
+			margin: 0 auto; <!-- centers the element horizontally  -->
+			padding: 20px;  <!-- adds 20 pixels of padding  -->
 		}
-		.recipe {
-			margin-bottom: 40px;
-			padding: 20px;
-			background-color: #fff;
-			box-shadow: 2px 4px 4px rgba(0,0,0,.1);
+		.recipe { <!-- This is a class selector that targets elements with the class name recipe.  -->
+			margin-bottom: 40px; <!-- Adds a margin of 40 pixels at the bottom of the element  -->
+			padding: 20px; <!-- adds 20 pixels of padding  -->
+			background-color: #fff; <!-- Sets the background color of the element to white.  -->
+			box-shadow: 2px 4px 4px rgba(0,0,0,.1); <!-- Adds a box-shadow effect to the element, with a 2-pixel horizontal offset, 4-pixel vertical offset, 4-pixel blur radius, and a semi-transparent black color.  -->
 		}
-		.recipe img {
-			max-width: 100%;
-			height: 200px;
-			margin-bottom: 20px;
-			width:auto;
+		.recipe img { <!-- This is a descendant selector that targets img elements inside elements with the class name recipe.  -->
+			max-width: 100%; <!-- Sets the maximum width of the image to 100% of its container  -->
+			height: 200px; <!-- Sets the height of the image to 200 pixels.  -->
+			margin-bottom: 20px; <!-- Adds a margin of 20 pixels at the bottom of the image.  -->
+			width:auto; <!-- Allows the width of the image to adjust automatically to maintain its aspect ratio.  -->
 		}
-		.recipe h2 {
-			margin-top: 0;
-			margin-bottom: 10px;
-			font-size: 24px;
+		.recipe h2 { <!-- This is a descendant selector that targets h2 elements inside elements with the class name recipe  -->
+			margin-top: 0; <!-- Removes the top margin  -->
+			margin-bottom: 10px; <!-- Adds a margin of 10 pixels at the bottom -->
+			font-size: 24px; <!-- Sets the font size to 24 pixels  -->
 		}
-		.recipe p {
-			margin-bottom: 10px;
+		.recipe p { <!-- This is a descendant selector that targets p elements inside elements with the class name recipe.   -->
+			margin-bottom: 10px; <!-- Adds a margin of 10 pixels at the bottom -->
 		}
-		.recipe ul {
-			list-style: disc;
-			margin: 0;
-			margin-bottom: 20px;
-			padding-left: 20px;
+		.recipe ul { <!-- This is a descendant selector that targets ul elements inside elements with the class name recipe.  -->
+			list-style: disc; <!-- Sets the bullet style of the list to a disc.  -->
+			margin: 0; <!-- Removes any default margin from the list.  -->
+			margin-bottom: 20px; <!-- Adds a margin of 20 pixels at the bottom of the list  -->
+			padding-left: 20px; <!-- Adds 20 pixels of padding to the left of the list.  -->
 		}
-		.recipe li {
-			margin-bottom: 10px;
+		.recipe li { <!-- This is a descendant selector that targets li elements inside elements with the class name recipe.   -->
+			margin-bottom: 10px; <!--  Adds a margin of 10 pixels at the bottom of each list item  -->
 		}
-		.recipe .button {
-			display: inline-block;
-			padding: 10px 20px;
-			background-color: #333;
-			color: #fff;
-			text-decoration: none;
-			border-radius: 4px;
+		.recipe .button { <!-- class selector that targets a button element within an element with the class recipe  -->
+			display: inline-block; <!-- This sets the display property to inline-block, which allows the element to sit inline with other elements but also have a set width and height.  -->
+			padding: 10px 20px; <!-- This sets the padding of the element to 10 pixels on the top and bottom and 20 pixels on the left and right.  -->
+			background-color: #333; <!-- This sets the background color of the element to a dark gray color with a hex value of #333.  -->
+			color: #fff; <!-- This sets the text color of the element to white  -->
+			text-decoration: none; <!-- This removes any text decoration, such as underlining or striking through, from the text.  -->
+			border-radius: 4px; <!-- This sets the border radius of the element to 4 pixels, which creates rounded corners. -->
 		}
-		.recipe .button:hover {
-			background-color: #555;
-		}
-		.main-navigation {
-   			 max-width: 990px;
-   			 padding: 0;
-   			 width: calc(100% - 20px);
-    			 align-items: center;
-   			 margin: 0 auto;
-    			 position: relative;
+		.recipe .button:hover { <!-- This is a pseudo-class selector that targets a button element within an element with the class 'recipe' when the element is hovered over by the user.   -->
+			background-color: #555; <!-- This changes the background color of the element to a darker gray color with a hex value of #555.  -->
+		} 
+		.main-navigation { <!-- This is a CSS class selector that targets the main navigation element on the webpage  -->
+   			 max-width: 990px; <!-- This is a CSS class selector that targets the main navigation element on the webpage  -->
+   			 padding: 0; <!-- This removes any padding from the element.  -->
+   			 width: calc(100% - 20px); <!-- This sets the width of the element to be 100% of the available space minus 20 pixels.  -->
+    			 align-items: center; <!-- This centers the items within the element along the vertical axis.  -->
+   			 margin: 0 auto; <!-- This centers the element horizontally within its parent element.  --> 
+    			 position: relative; <!-- This sets the position property of the element to relative, which allows it to be positioned relative to its normal position.  -->
 	        }
-		.site-menu {
-   			 display: flex;
-       			 flex-direction: row;
-       			 align-items: center;
-       			 justify-content: space-between;
+		.site-menu { <!-- removes any padding  -->
+   			 display: flex; <!-- removes any padding  -->
+       			 flex-direction: row; <!-- removes any padding  -->
+       			 align-items: center; <!-- removes any padding  -->
+       			 justify-content: space-between; <!-- removes any padding  -->
    		}
-		.menu-left {
-      			 display: flex;
-      			 flex-direction: row;
-      			 align-items: center;
-       			 justify-content: space-between;
+		.menu-left { <!-- removes any padding  -->
+      			 display: flex; <!-- removes any padding  -->
+      			 flex-direction: row; <!-- removes any padding  -->
+      			 align-items: center; <!-- removes any padding  -->
+       			 justify-content: space-between; <!-- removes any padding  -->
 		}
-		.site-title {
-      			 margin: 0;
-       			 line-height: 1;
-       			 width: 300px;
+		.site-title { <!-- removes any padding  -->
+      			 margin: 0; <!-- removes any padding  -->
+       			 line-height: 1; <!-- removes any padding  -->
+       			 width: 300px; <!-- removes any padding  -->
 		}
 
-		.side-title-munch {
-       			 display: block;
-       			 width: 100%;
-       			 background: url(Quickmunchlogo.png) no-repeat center;
-       			 background-size: contain;
-       			 margin: 0;
-      			 max-width: 300px;
-       			 height: 55px;
-       			 text-indent: -9999px;
-       			 transition: transform 400ms;
+		.side-title-munch { <!-- removes any padding  -->
+       			 display: block; <!-- removes any padding  -->
+       			 width: 100%; <!-- removes any padding  -->
+       			 background: url(Quickmunchlogo.png) no-repeat center; <!-- removes any padding  -->
+       			 background-size: contain; <!-- removes any padding  -->
+       			 margin: 0; <!-- removes any padding  -->
+      			 max-width: 300px; <!-- removes any padding  -->
+       			 height: 55px; <!-- removes any padding  -->
+       			 text-indent: -9999px; <!-- removes any padding  -->
+       			 transition: transform 400ms; <!-- removes any padding  -->
 		}
 
 		.menu-right {
